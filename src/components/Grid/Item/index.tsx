@@ -15,7 +15,7 @@ export default function GridItem({
   return (
     <button
       onClick={() => clickEvent()}
-      className="relative flex min-h-[100px] w-full flex-col items-center justify-center rounded-md border bg-amber-600 transition-all hover:bg-amber-300"
+      className="relative flex min-h-[100px] w-full flex-col items-center justify-center rounded-md border bg-soft-cream transition-all hover:bg-honey-gold"
     >
       <div>{name}</div>
       <div className="absolute right-2 top-1">{SVGMap[status] || '-'}</div>
