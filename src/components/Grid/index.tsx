@@ -9,7 +9,7 @@ export default function Grid() {
     navigate(`/details/${id}`)
   }
   return (
-    <>
+    <div className="px-5">
       <GridFilter />
       <div className="grid grid-cols-6 gap-2">
         {MockData.map((each) => {
@@ -23,6 +23,6 @@ export default function Grid() {
           )
         })}
       </div>
-    </>
+    </div>
   )
 }
