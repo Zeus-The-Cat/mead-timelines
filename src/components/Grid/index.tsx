@@ -1,10 +1,12 @@
+import { useNavigate } from 'react-router-dom'
 import GridFilter from './Filter'
 import GridItem from './Item'
 import { MockData } from './Item/Mock-Data'
 
 export default function Grid() {
+  const navigate = useNavigate()
   const ClickEvent = (id: number) => {
-    console.log(id)
+    navigate(`/details/${id}`)
   }
   return (
     <>

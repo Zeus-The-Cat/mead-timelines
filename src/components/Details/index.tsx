@@ -1,7 +1,12 @@
+import { useParams } from 'react-router-dom'
 import { MockData } from '../Grid/Item/Mock-Data'
 
-export default function Details({ id }: { id: number }) {
-  const details = MockData.find((val) => val.id === id)
+export default function Details() {
+  const { detailsId } = useParams()
+  if (detailsId === undefined) {
+    return <div>Missing Id</div>
+  }
+  const details = MockData.find((val) => val.id === +detailsId)
   if (!details) {
     return <div>Missing Id</div>
   }
